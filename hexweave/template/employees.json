@@ -1,0 +1,113 @@
+{
+    "numRows": 20000,
+    "countries": [],
+    "rows": [
+        {
+            "type": "AutoIncrement",
+            "title": "employeeId",
+            "settings": {
+                "incrementStart": 1000000001,
+                "incrementValue": 1
+            }
+        },
+	{
+            "type": "Names",
+            "title": "displayName",
+            "settings": {
+                "placeholder": "Name Surname"
+            }
+        },
+	{
+            "type": "Names",
+            "title": "givenName",
+            "settings": {
+                "placeholder": "Name"
+            }
+        },
+	{
+            "type": "Names",
+            "title": "familyName",
+            "settings": {
+                "placeholder": "Surname"
+            }
+        },
+	{
+            "type": "Names",
+            "title": "middleName",
+            "settings": {
+                "placeholder": "Name"
+            }
+        },
+	{
+            "type": "Names",
+            "title": "fullyQualifiedName",
+            "settings": {
+                "placeholder": "Surname, Name Initial."
+            }
+        },
+	{
+            "type": "Names",
+            "title": "printOnCheckName",
+            "settings": {
+                "placeholder": "Surname, Name Initial."
+            }
+        },
+        {
+            "type": "List",
+            "title": "title",
+            "settings" : {
+                "listType": "exactly",
+                "exactly": 1,
+                "list": "CEO|COO|CFO|CTO|Executive Vice President|Vice President|Sales Director|Development Director|Senior Project Manager|Data Scientist|Architect|Principal Software Engineer|Staff Software Engineer"
+            }
+        },
+        {
+            "type": "List",
+            "title": "suffix",
+            "settings" : {
+                "listType": "exactly",
+                "exactly": 1,
+                "list": "Jr|I|II|III|IV|V"
+            }
+        },
+        {
+            "type": "List",
+            "title": "gender",
+            "settings" : {
+                "listType": "exactly",
+                "exactly": 1,
+                "list": "male|female"
+            }
+        },
+        {
+            "type": "List",
+            "title": "martialStatus",
+            "settings" : {
+                "listType": "exactly",
+                "exactly": 1,
+                "list": "married|single"
+            }
+        },
+        {
+            "type": "Composite",
+            "title": "birthGender",
+            "settings": {
+                "placeholder": "{$ROW10}"
+            }
+        },
+        {
+            "type": "Composite",
+            "title": "pictureUrl",
+            "settings": {
+                "placeholder": "http://xyz.com/{$ROW1}.jpg"
+            }
+        }
+    ],
+    "export": {
+        "type": "CSV",
+        "settings" : {
+            "delimiter": ",",
+            "eol": "Unix"
+        }
+    }
+}

@@ -1,0 +1,143 @@
+{
+    "numRows": 200000,
+    "countries": [],
+    "rows": [
+        {
+            "type": "AutoIncrement",
+             "title": "customerId",
+             "settings": {
+                 "incrementStart": 1000000001,
+                 "incrementValue": 1
+             }
+        },
+	{
+            "type": "Company",
+             "title": "defaultTaxCodeID",
+             "settings": {
+                 "rangeMin": 10000,
+                 "rangeMax": 99999
+             }
+        },
+        {
+            "type": "Boolean",
+            "title": "taxableFlag",
+            "settings": {
+                "placeholder": "false|true"
+            }
+        },
+	{ 
+            "type": "List",
+            "title": "currencyCode",
+            "settings" : {
+	         "listType": "exactly",
+	         "exactly": 1,
+                 "list": "USD|GBP|CAD|SGD|INR|EUR|MYR|VND|AUD|HKD|JPY|KPW|CHF|UAH|YER|AED|ARS|AWG|BAM|BBD|BDT|BGN|BHD|BIF|BMD|BND|BOB|BRL|BSD|BTN|BWP|BYR|CDF|CLP|CNY|COP|CRC|CUP|CVE|CZK|DJF|DKK|DOP|DZD|EGP|ERN|ETB|FJD|FKP|GEL|GHS|GIP|GMD|GNF|GTQ|GYD|HNL|HRK|HTG|HUF|IDR|ILS|IQD|IRR|ISK|JMD|JOD|KES|KHR|KMF|KRW|KWD|KYD|KZT|LAK|LBP|LKR|LRD|LSL|LTL|LVL|LYD|MAD|MDL|MGA|MKD|MMK|MNT|MOP|MRO|MUR|MVR|MWK|MXN|MZN|NAD|NGN|NIO|NOK|NPR|NZD|OMR|PAB|PEN|PGK|PHP|PKR|PLN|PYG|QAR|RON|RSD|RUB|RWF|SAR|SBD|SCR|SDG|SEK|SHP|SLL|SOS|STD|SVC|SYP|SZL|THB|TND|TOP|TRY|TTD|TWD|TZS|UGX|UYU|UZS|VEF|VUV|WST|XAF|XCD|XPF|ZAR|ZMK|ZWD|XOF|ALL|AOA|AMD|AZN|BZD|ANG|TJS|TMT|SRD|AFN|ZMW|BTC"
+            }
+	},
+	{ 
+            "type": "NumberRange",
+            "title": "termId",
+             "settings": {
+                 "rangeMin": 1,
+                 "rangeMax": 9
+             }
+        },
+	{
+            "type": "NumberRange",
+            "title": "paymentMethodId",
+            "settings": {
+                "rangeMin": 1001,
+                "rangeMax": 9999
+            }
+        },
+        {
+            "type": "TextRandom",
+            "title": "notes",
+            "settings": {
+                "startsWithLipsum": false,
+                "minWords": 5,
+                "maxWords": 10 
+            }
+        },
+        {
+            "type": "Boolean",
+            "title": "active",
+            "settings": {
+                "placeholder": "false|true"
+            }
+        },
+	{
+            "type": "List",
+            "title": "preferredDeliveryMethod",
+            "settings" : {
+	        "listType": "exactly",
+	        "exactly": 1,
+                "list": "PRINT|EMAIL|NONE"
+            }
+        },
+	{
+            "type": "NumberRange",
+            "title": "resaleNumber",
+            "settings": {
+                "rangeMin": 1001,
+                "rangeMax": 9999
+            }
+        },
+	{ 
+            "type": "NumberRange",
+            "title": "taxExemptionReason",
+            "settings": {
+                "rangeMin": 1,
+                "rangeMax": 99
+            }
+        },
+	{
+            "type": "Currency",
+            "title": "balanceWithJobs",
+            "settings": {
+                "format":  "XXXXXXXXX.XX",
+                "rangeFrom": "0.00",
+                "rangeTo": "100000000.00"
+            }
+        },
+	{
+            "type": "NumberRange",
+            "title": "primaryTaxIdentifier",
+            "settings" : {
+                "rangeMin": 1000001,
+                "rangeMax": 9999999
+            }
+	},
+	{
+            "type": "NumberRange",
+            "title": "secondaryTaxIdentifier",
+            "settings" : {
+                "rangeMin": 1000001,
+                "rangeMax": 9999999
+            }
+	},
+        {
+            "type": "Boolean",
+            "title": "tdsEnabled",
+            "settings": {
+                "placeholder": "False|True"
+            }
+        },
+	{ 
+            "type": "Date",
+            "title": "Date",
+            "settings": {
+                "fromDate": "04/01/2016",
+                "toDate": "01/01/2020",
+                "placeholder": "U"
+            }
+        }
+    ],
+    "export": {
+        "type": "CSV",
+        "settings" : {
+            "delimiter": ",",
+            "eol": "Unix"
+        }
+    }
+}

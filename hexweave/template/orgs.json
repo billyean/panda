@@ -1,0 +1,71 @@
+{
+    "numRows": 200000,
+    "countries": [],
+    "rows": [
+        {
+            "type": "AutoIncrement",
+            "title": "companyId",
+            "settings": {
+                "incrementStart": 10000001,
+                "incrementValue": 1
+            }
+        },
+	{
+            "type": "Company",
+            "title": "displayName"
+        },
+	{
+            "type": "Composite",
+            "title": "legalName",
+            "settings": {
+                "placeholder": "{$ROW2}"
+            }
+        },
+	{
+            "type": "Composite",
+            "title": "assumedName",
+            "settings": {
+                "placeholder": "{$ROW2}"
+            }
+        },
+	{
+            "type": "OrganisationNumber",
+            "title": "industrySIC"
+        },
+	{
+            "type": "OrganisationNumber",
+            "title": "industryNAICS"
+        },
+	{
+            "type": "Composite",
+            "title": "website",
+            "settings": {
+                "placeholder": "www.{$ROW2|replace:' ':''}.com"
+            }
+        },
+	{
+            "type": "List",
+            "title": "companyType",
+            "settings" : {
+	        "listType": "exactly",
+	        "exactly": 1,
+                "list": "service|finance|software|manufacture|telecom"
+            }
+	},
+	{
+            "type": "NumberRange",
+	    "title": "realmId",
+            "settings" : {
+                "rangeMin": 1000000000,
+                "rangeMax": 9999999999
+            }
+        }
+    ],
+    "export": {
+        "type": "CSV",
+        "settings" : {
+            "delimiter": ",",
+            "eol": "Unix"
+        }
+    }
+}

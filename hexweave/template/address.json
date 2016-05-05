@@ -1,0 +1,97 @@
+{
+    "numRows": 200000,
+    "countries": [],
+    "rows": [
+        {
+            "type": "AutoIncrement",
+            "title": "addressId",
+            "settings": {
+                "incrementStart": 1000000001,
+                "incrementValue": 1
+            }
+        },
+        {
+            "type": "List",
+            "title": "verificationStatus",
+            "settings" : {
+	        "listType": "exactly",
+	        "exactly": 1,
+                "list": "Verified|Not_Verified"
+            }
+        },
+	{
+            "type": "Date",
+            "title": "verificationDate",
+            "settings": {
+                "fromDate": "01/01/2010",
+                "toDate": "04/01/2016",
+                "placeholder": "U"
+            }
+        },
+	{
+            "type": "StreetAddress",
+            "title": "streetAddress"
+        },
+	{
+            "type": "City",
+            "title": "city"
+        },
+	{
+            "type": "Composite",
+            "title": "county",
+            "settings": {
+                "placeholder": "{$ROW5}"
+            }
+        },
+	{
+            "type": "Region",
+            "title": "regionState"
+        },
+	{
+            "type": "PostalZip",
+            "title": "postalCode",
+            "settings": {
+                "countries": ["united_kingdom", "US"]
+            }
+        },
+	{
+            "type": "Country",
+            "title": "country",
+            "settings": {
+                "limitCountriesToSelectedPlugins": true
+            }
+        },
+        {
+            "type": "LatLng",
+            "title": "geoLatitude",
+            "settings": {
+                "lat": true,
+                "lng": false
+            }
+        },
+        {
+            "type": "LatLng",
+            "title": "geoLongitude",
+            "settings": {
+                "lat": false,
+                "lng": true
+            }
+        },
+	{
+            "type": "List",
+            "title": "addressType",
+            "settings" : {
+	        "listType": "exactly",
+	        "exactly": 1,
+                "list": "Headquarter|Branch|Subsidiary|RD"
+            }
+	}
+    ],
+    "export": {
+        "type": "CSV",
+        "settings" : {
+            "delimiter": ",",
+            "eol": "Unix"
+        }
+    }
+}

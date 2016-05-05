@@ -1,0 +1,55 @@
+{
+    "numRows": 200000,
+    "countries": [],
+    "rows": [
+        {
+            "type": "AutoIncrement",
+            "title": "telphoneId",
+            "settings": {
+                "incrementStart": 1000000001,
+                "incrementValue": 1
+            }
+        },
+        {
+            "type": "List",
+            "title": "verificationStatus",
+            "settings" : {
+	        "listType": "exactly",
+	        "exactly": 1,
+                "list": "Verified|Not_Verified"
+            }
+        },
+	{
+            "type": "Date",
+            "title": "verificationDate",
+            "settings": {
+                "fromDate": "01/01/2010",
+                "toDate": "04/01/2016",
+                "placeholder": "U"
+            }
+        },
+        {
+            "type": "Phone",
+            "title": "phoneNumber",
+            "settings": {
+                "placeholder": "1-Xxx-Xxx-xxxx|Xxx-xxxx"
+            }
+        },
+	{
+            "type": "List",
+            "title": "phoneType",
+            "settings" : {
+	        "listType": "exactly",
+	        "exactly": 1,
+                "list": "HOME|OFFICE|MOBILE|SKYPE"
+            }
+        }
+    ],
+    "export": {
+        "type": "CSV",
+        "settings" : {
+            "delimiter": ",",
+            "eol": "Unix"
+        }
+    }
+}
