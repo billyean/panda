@@ -5,8 +5,8 @@
 # Example: sh extract_result.sh jmeter.log logs/jga512A.jtl
 
 line=`tail -n 1 ${1}`
-throughput=`echo $line | cut -d " " -f12`
-avg_time=`echo $line | cut -d " " -f14`
+throughput=`echo $line | awk '{print $11}'`
+avg_time=`echo $line | awk '{print $13}'`
 p50=`sh pxx.sh 50 ${2}`
 p75=`sh pxx.sh 75 ${2}`
 p90=`sh pxx.sh 90 ${2}`
