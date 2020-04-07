@@ -38,3 +38,10 @@ This is a JMH test repo for scala benchmark
 |-----------------------------------------|--------|---------|---------------|--------------|------|
 |ImmutableBenchMark.createImmutableList   |  thrpt |  2      | 12854111.289  |              | ops/s|
 |ImmutableBenchMark.createMutableList     |  thrpt |  2      | 22969947.009  |              | ops/s|
+
+- [X] [Array.fill vs map](src/main/scala/test/FillOrMapBenchMark.scala)
+
+|Benchmark                       |  Mode  | Cnt     |     Score     |     Error    | Units|
+|--------------------------------|--------|---------|---------------|--------------|------|
+|FillOrMapBenchMark.arrayFill      |   thrpt|  2      | 40901362.857  |   | ops/s|
+|FillOrMapBenchMark.map |   thrpt|  2      | 10961137.913  |  | ops/s|
